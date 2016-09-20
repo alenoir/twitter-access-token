@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "DEBUG=twitter-access-token:* ./bin/www",
-    "gulp": "gulp"
+    "dev": "DEBUG=twitter-access-token:* gulp"
   },
   "dependencies": {
     "body-parser": "~1.10.2",
