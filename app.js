@@ -28,7 +28,7 @@ app.use(function (req, res, next) {
       {
         consumerKey: consumer_key,
         consumerSecret: consumer_secret,
-        callbackURL: "http://127.0.0.1:4000/auth/twitter/callback"
+        callbackURL: process.env.TWITTER_CALLBACK_URL || 'http://127.0.0.1:4000/auth/twitter/callback'
       },
       function(token, tokenSecret, profile, cb) {
         profile.token = token;
