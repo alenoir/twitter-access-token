@@ -1,0 +1,7 @@
+{
+  "name": "Twittr Access Token",
+  "description": "Find Twitter Access Token for your App ",
+  "repository": "https://github.com/alenoir/twitter-access-token",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["twitter", "express", "passport", "token", "access token"]
+}
