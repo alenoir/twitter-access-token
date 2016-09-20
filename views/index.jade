@@ -1,5 +1,14 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div(class="row")
+  div(class="col-md-12")
+    h1 Find Twitter Access Token for App
+    form(action="/auth/twitter")
+      div(class="form-group")
+        label(for="consumer_key") Consumer Key
+        input(type="text" name="consumer_key" class="form-control" id="consumer_key" placeholder="Consumer Key")
+      div(class="form-group")
+        label(for="consumer_secret") Consumer Secret
+        input(type="text" name="consumer_secret" class="form-control" id="consumer_secret" placeholder="Consumer Secret")
+      button(type="submit" class="btn btn-primary") Get my access token

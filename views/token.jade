@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  div(class="row")
+  div(class="col-md-12")
+    h1 Your access Token
+    div(class="form-group")
+      label(for="consumer_key") Access Token
+      input(type="text" class="form-control" id="access_token" value="#{token}" placeholder="Consumer Key" readonly)
+    div(class="form-group")
+      label(for="consumer_secret") Access Token Secret
+      input(type="text" class="form-control" id="access_token_secret" value="#{tokenSecret}" placeholder="Consumer Secret" readonly)
