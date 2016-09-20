@@ -19,16 +19,16 @@ app.use(passport.session());
 app.use(function (req, res, next) {
   var consumer_key = req.session.consumer_key || req.query.consumer_key;
   var consumer_secret = req.session.consumer_secret || req.query.consumer_secret;
+  console.log(req.protocol + '://' + req.get('host'));
 
   if (consumer_key && consumer_secret) {
     req.session.consumer_key = consumer_key;
     req.session.consumer_secret = consumer_secret;
-
     passport.use(new TwitterStrategy(
       {
         consumerKey: consumer_key,
         consumerSecret: consumer_secret,
-        callbackURL: process.env.TWITTER_CALLBACK_URL || 'http://127.0.0.1:4000/auth/twitter/callback'
+        callbackURL: req.protocol + '://' + req.get('host') + '/auth/twitter/callback'
       },
       function(token, tokenSecret, profile, cb) {
         profile.token = token;
