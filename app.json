@@ -2,6 +2,6 @@
   "name": "Twittr Access Token",
   "description": "Find Twitter Access Token for your App ",
   "repository": "https://github.com/alenoir/twitter-access-token",
-  "logo": "https://github.com/alenoir/twitter-access-token/blob/master/public/images/twitter.png?raw=true",
+  "logo": "https://raw.githubusercontent.com/alenoir/twitter-access-token/master/public/images/twitter.png",
   "keywords": ["twitter", "express", "passport", "token", "access token"]
 }
